@@ -36,10 +36,12 @@ namespace ModelTest.Controllers
         [HttpPost]
         public IActionResult FizzBuzz(string userInput1, string userInput2)
         {
-            var fizzBuzzModel = new FizzBuzzModel();
-            fizzBuzzModel.FizzNum = Convert.ToInt32(userInput1);
-            fizzBuzzModel.BuzzNum = Convert.ToInt32(userInput2);
-            fizzBuzzModel.Output = "";
+            var fizzBuzzModel = new FizzBuzzModel
+            {
+                FizzNum = Convert.ToInt32(userInput1),
+                BuzzNum = Convert.ToInt32(userInput2),
+                Output = ""
+            };
             for (int i = 1; i <= 100; i++)
             {
                 if (i % fizzBuzzModel.FizzNum == 0 && i % fizzBuzzModel.BuzzNum == 0)
