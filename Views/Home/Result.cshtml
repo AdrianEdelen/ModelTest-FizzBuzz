@@ -1,0 +1,12 @@
+﻿@using ModelTest.Models
+@model FizzBuzzModel
+
+@{
+    ViewData["Title"] = "Result";
+}
+<h1>Here is the data you gave me</h1>
+<hr />
+<h2>User Input 1: @Model.FizzNum</h2>
+<h2>User Input 2: @Model.BuzzNum</h2>
+
+<p>@Model.Output</p>

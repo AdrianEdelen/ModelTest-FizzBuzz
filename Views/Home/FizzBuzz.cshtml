@@ -1,0 +1,24 @@
+﻿@using ModelTest.Models
+@model FizzBuzzModel
+
+@{
+	ViewData["Title"] = "Result";
+}
+
+
+<form asp-action="FizzBuzz">
+	<div class="row">
+		<div class="col">
+			<input type="text" name="userInput1" placeholder="Enter Number 1" />
+		</div>
+		<div class="col">
+			<input type="text" name="userInput2" placeholder="Enter Number 2" />
+		</div>
+		<div class="col">
+			<button type="submit" class="btn btn-secondary">Click Me</button>
+		</div>
+	</div>
+</form>
+<hr />
+<h4>@Model.Output</h4>
+
